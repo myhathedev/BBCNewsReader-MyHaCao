@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Đọc Báo BBC</string>
+    <string name="open">Open navigation drawer</string>
+    <string name="close">Close navigation drawer</string>
+    <string name="contact">LIÊN HỆ CHÚNG TÔI</string>
+    <string name="name">Tên :</string>
+    <string name="myName">My Ha Cao</string>
+    <string name="email">Email :</string>
+    <string name="myEmail">cao00108@algonquinlive.com</string>
+    <string name="address">Địa chỉ :</string>
+    <string name="myAddress">Algonquin College</string>
+    <string name="note1">Hãy để lại thông tin và chúng tôi sẽ liên lạc với bạn trong thời gian gần nhất.</string>
+    <string name="urName">Tên khách hàng:</string>
+    <string name="urEmail">Email :</string>
+    <string name="urComment">Lời nhắn :</string>
+    <string name="submit">Gửi</string>
+    <string name="favourite">Yêu thích</string>
+    <string name="exit">Thoát</string>
+    <string name="favNews">TIN TỨC YÊU THÍCH</string>
+    <string name="remove">Xóa</string>
+    <string name="details">Thông tin chi tiết</string>
+    <string name="title">Tiêu đề :</string>
+    <string name="description">Mô tả :</string>
+    <string name="link">Link :</string>
+    <string name="pubDate">Ngày đăng :</string>
+    <string name="news">TIN TỨC MỚI NHẤT</string>
+    <string name="home">Trang chủ</string>
+    <string name="help">Trợ giúp</string>
+    <string name="favList">Danh sách yêu thích</string>
+    <string name="contactUs">Liên hệ chúng tôi</string>
+    <string name="note2">Bấm vào tiêu đề để xem chi tiết</string>
+    <string name="howTo">Hướng dẫn sử dụng</string>
+    <string name="ok">OK</string>
+    <string name="failed">Không thành công</string>
+    <string name="sent">Đã gửi</string>
+    <string name="note3">Nhập thông tin và bấm nút "Gửi" để gửi thông tin của bạn.</string>
+    <string name="note4">Bấm "Yêu thích" để thêm tin này vào danh sách yêu thích.</string>
+    <string name="note5">Bấm "Xóa" để xóa tin đã chọn khỏi danh sách yêu thích.</string>
+    <string name="removed">Đã xóa khỏi danh sách yêu thích</string>
+    <string name="added">Đã thêm vào danh sách yêu thích</string>
+    <string name="back">Trở lại</string>
+</resources>

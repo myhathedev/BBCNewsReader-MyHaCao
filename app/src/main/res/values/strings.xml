@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BBC News Reader</string>
+    <string name="open">Open navigation drawer</string>
+    <string name="close">Close navigation drawer</string>
+    <string name="contact">CONTACT</string>
+    <string name="name">Name :</string>
+    <string name="myName">My Ha Cao</string>
+    <string name="email">Email :</string>
+    <string name="myEmail">cao00108@algonquinlive.com</string>
+    <string name="address">Address :</string>
+    <string name="myAddress">Algonquin College</string>
+    <string name="note1">Please leave your contact and we will contact you as soon as possible.</string>
+    <string name="urName">Your Name :</string>
+    <string name="urEmail">Your Email :</string>
+    <string name="urComment">Comments:</string>
+    <string name="submit">Submit</string>
+    <string name="favourite">Favourite</string>
+    <string name="exit">Exit</string>
+    <string name="favNews">FAVOURITE NEWS</string>
+    <string name="remove">Remove</string>
+    <string name="details">Details</string>
+    <string name="title">Title :</string>
+    <string name="description">Description :</string>
+    <string name="link">Link :</string>
+    <string name="pubDate">PubDate :</string>
+    <string name="news">BREAKING NEWS</string>
+    <string name="home">Home</string>
+    <string name="help">Help</string>
+    <string name="favList">Favourite List</string>
+    <string name="contactUs">Contact Us</string>
+    <string name="note2">Click any title to view its detail.</string>
+    <string name="howTo">How to use this page</string>
+    <string name="ok">OK</string>
+    <string name="failed">Failed</string>
+    <string name="sent">Sent</string>
+    <string name="note3">To send your comment, input the information and then click "Submit"</string>
+    <string name="note4">Click "Favourite" to save this news to Favourite List.</string>
+    <string name="note5">Click "Remove" to remove the selected news from the Favourite List</string>
+    <string name="removed">Removed from Favourite List</string>
+    <string name="added">Added to Favourite List</string>
+    <string name="back">Go back</string>
+</resources>
