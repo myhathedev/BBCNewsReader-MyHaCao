@@ -13,10 +13,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -67,7 +65,7 @@ public class ContactUs extends AppCompatActivity
             SharedPreferences.Editor myEdit = sharedPreferences.edit();
             myEdit.putString("name", nameE.getText().toString());
             myEdit.putString("email", emailE.getText().toString());
-            myEdit.commit();
+            myEdit.apply();
             if (intent.resolveActivity(getPackageManager()) != null && name!=null && email!=null) {
                 startActivity(intent);
                 String message = getResources().getString(R.string.sent);

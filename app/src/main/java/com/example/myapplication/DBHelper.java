@@ -4,14 +4,12 @@ import java.util.ArrayList;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 
 public class DBHelper extends SQLiteOpenHelper {
 
     protected final static String DATABASE_NAME = "BBCNewsReaders";
-    protected final static int VERSION_NUM = 1;
     public final static String TABLE_NAME = "Favourite_Table";
     public final static String COL_ID = "_id";
     public final static String COL_TITLE = "Title";
@@ -41,7 +39,7 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertNews(fav news) {
+    public void insertNews(fav news) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_TITLE, news.title);
@@ -49,45 +47,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put(COL_LINK, news.link);
         contentValues.put(COL_DATE, news.date);
         db.insert(TABLE_NAME, null, contentValues);
-        return true;
     }
-
-//    public void printCursor(Cursor res) {
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        int version = db.getVersion();
-//        int columncount = res.getColumnCount();
-//        String[] colnames = res.getColumnNames();
-//        int resultnumber = res.getCount();
-//        System.out.println("Version: " + version);
-//        System.out.println("Columns: " + columncount);
-//        for (int i = 0; i < colnames.length; i++) {
-//            System.out.println("Column " + i + " :" + colnames[i]);
-//        }
-//        System.out.println("Number of results: " + resultnumber);
-//        res.moveToFirst();
-//        for (int i = 0; i < resultnumber; i++) {
-//            System.out.print("row :" + i);
-//            for (int j = 1; j < columncount; j++) {
-//                System.out.println(res.getString(j));
-//            }
-//            res.moveToNext();
-//        }
-//    }
-
-//    public Cursor getCursor() {
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        return db.rawQuery("select * from " + TABLE_NAME, null);
-//    }
-//
-//    public Cursor getData(object news) {
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        return db.rawQuery("select * from " + TABLE_NAME + " where Title='" + news.title + "';", null);
-//    }
-//
-//    public int numberOfRows() {
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        return (int) DatabaseUtils.queryNumEntries(db, TABLE_NAME);
-//    }
 
 
     public void deleteNews(fav news) {
@@ -117,16 +77,8 @@ public class DBHelper extends SQLiteOpenHelper {
             favList.add(new fav(id,title,des,link,date));
             res.moveToNext();
         }
+        res.close();
         return favList;
     }
 
-    public boolean isFavNews(object news) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where Title='"+news.title+"';", null);
-        if (res!=null) {
-            return true;
-        } else {
-        return false;
-        }
-    }
 }

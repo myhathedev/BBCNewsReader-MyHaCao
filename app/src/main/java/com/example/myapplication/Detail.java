@@ -1,12 +1,10 @@
 package com.example.myapplication;
 
-import androidx.annotation.ContentView;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -75,12 +72,9 @@ public class Detail extends AppCompatActivity
             db.insertNews(selectedNews);
             View view = findViewById(R.id.content_frame);
             Snackbar snackbar = Snackbar.make(view,message,Snackbar.LENGTH_LONG);
-            snackbar.setAction(R.string.back, new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(Detail.this, MainActivity.class);
-                    startActivity(intent);
-                }
+            snackbar.setAction(R.string.back, v -> {
+                Intent intent = new Intent(Detail.this, MainActivity.class);
+                startActivity(intent);
             });
             snackbar.show();
         });

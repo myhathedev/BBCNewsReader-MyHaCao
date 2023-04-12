@@ -4,12 +4,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentManager;
-
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,18 +15,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.google.android.material.navigation.NavigationView;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
-
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -38,8 +28,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
        implements NavigationView.OnNavigationItemSelectedListener{
-        int selectedItemPosition=-1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,13 +45,8 @@ public class MainActivity extends AppCompatActivity
         NavigationView navView = findViewById(R.id.nav_view);
         navView.setNavigationItemSelectedListener(this);
 
-        try {
-            getNews getNews = new getNews();
-            getNews.execute("https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml");
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
+        getNews getNews = new getNews();
+        getNews.execute("https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml");
     }
     // async
     private class getNews  extends AsyncTask<String, Integer, ArrayList<object>> {
@@ -75,11 +58,10 @@ public class MainActivity extends AppCompatActivity
                 URL url = new URL(args[0]);
 
                 //imitate real connection
-                try {
-                    publishProgress(0);
-                    Thread.sleep(100);
-                    publishProgress(25);
-                } catch (Exception e ) {}
+                publishProgress(0);
+                Thread.sleep(100);
+                publishProgress(25);
+
 
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 InputStream response = conn.getInputStream();
@@ -90,10 +72,8 @@ public class MainActivity extends AppCompatActivity
                 xpp.setInput(response, "UTF-8");
 
                 //imitate real connection
-                try {
-                    Thread.sleep(150);
-                    publishProgress(50);
-                } catch (Exception e ) {}
+                Thread.sleep(150);
+                publishProgress(50);
 
                 ArrayList<String> ls = new ArrayList<>();
                 boolean item = false;
@@ -129,28 +109,25 @@ public class MainActivity extends AppCompatActivity
                         if (tagName.equals("pubDate")) {
                             date = xpp.getText();
                             ls.add(date);
-                            if (ls !=null) {
                             if ( ls.size() >= 5) {
                                 newsList.add(new object(ls.get(0), ls.get(1), ls.get(2), ls.get(3), ls.get(4)));
                                 ls.clear();
-                            }}
+                            }
                         }
                     }
                     xpp.next();
                 }
-                //--------get data done
+                //close stream and connection
                 if (response != null) { response.close();}
                 conn.disconnect();
                 //Imitate real connection
-                try {
-                    Thread.sleep(100);
-                    publishProgress(75);
-                    Thread.sleep(50);
-                    publishProgress(100);
-                } catch (Exception e ) {}
+                Thread.sleep(100);
+                publishProgress(75);
+                Thread.sleep(50);
+                publishProgress(100);
 
             } catch (Exception e) {
-                System.out.println(e);
+                System.out.println("...");
             }
             return newsList;
         }
