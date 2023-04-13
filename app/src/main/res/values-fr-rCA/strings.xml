@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lecteur de nouvelles de la BBC</string>
+    <string name="open">Ouvrir le tiroir de navigation</string>
+    <string name="close">Fermer le tiroir de navigation</string>
+    <string name="contact">CONTACT</string>
+    <string name="name">Nom :</string>
+    <string name="myName">My Ha Cao</string>
+    <string name="email">E-mail :</string>
+    <string name="myEmail">cao00108@algonquinlive.com</string>
+    <string name="address">Adresse :</string>
+    <string name="myAddress">Collège Algonquin</string>
+    <string name="note1">Veuillez laisser votre contact et nous vous contacterons dans les plus brefs délais.</string>
+    <string name="urName">Votre nom :</string>
+    <string name="urEmail">Votre Courriel :</string>
+    <string name="urComment">Commentaires:</string>
+    <string name="submit">Soumettre</string>
+    <string name="favourite">Préféré</string>
+    <string name="exit">Sortie</string>
+    <string name="favNews">NOUVELLES FAVORIS</string>
+    <string name="remove">Retirer</string>
+    <string name="details">Détails</string>
+    <string name="title">Titre :</string>
+    <string name="description">Description :</string>
+    <string name="link">Lien :</string>
+    <string name="pubDate">Date de publication :</string>
+    <string name="news">DERNIÈRES NOUVELLES</string>
+    <string name="home">Maison</string>
+    <string name="help">Aider</string>
+    <string name="favList">Liste de favoris</string>
+    <string name="contactUs">Contactez-nous</string>
+    <string name="note2">Cliquez sur n'importe quel titre pour voir ses détails.</string>
+    <string name="howTo">Comment utiliser cette page</string>
+    <string name="ok">D'ACCORD</string>
+    <string name="failed">Échoué</string>
+    <string name="sent">Envoyée</string>
+    <string name="note3">Pour envoyer votre commentaire, saisissez les informations puis cliquez sur "Soumettre"</string>
+    <string name="note4">Cliquez sur "Favori" pour enregistrer cette nouvelle dans la liste des favoris.</string>
+    <string name="note5">Cliquez sur "Supprimer" pour supprimer les nouvelles sélectionnées de la liste des favoris</string>
+    <string name="removed">Supprimé de la liste des favoris</string>
+    <string name="added">Ajouté à la liste des favoris</string>
+    <string name="back">Retourner</string>
+</resources>
