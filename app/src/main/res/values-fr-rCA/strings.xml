@@ -29,9 +29,9 @@
     <string name="help">Aider</string>
     <string name="favList">Liste de favoris</string>
     <string name="contactUs">Contactez-nous</string>
-    <string name="note2">Cliquez sur n'importe quel titre pour voir ses détails.</string>
+    <string name="note2">Cliquez sur n\'importe quel titre pour voir ses détails.</string>
     <string name="howTo">Comment utiliser cette page</string>
-    <string name="ok">D'ACCORD</string>
+    <string name="ok">D\'ACCORD</string>
     <string name="failed">Échoué</string>
     <string name="sent">Envoyée</string>
     <string name="note3">Pour envoyer votre commentaire, saisissez les informations puis cliquez sur "Soumettre"</string>
