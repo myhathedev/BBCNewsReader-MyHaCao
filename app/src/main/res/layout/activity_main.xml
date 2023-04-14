@@ -15,6 +15,7 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:title="@string/app_name"
         />
 
     <androidx.drawerlayout.widget.DrawerLayout

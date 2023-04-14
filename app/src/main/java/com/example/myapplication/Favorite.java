@@ -1,8 +1,5 @@
 package com.example.myapplication;
 
-
-
-
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -97,8 +94,11 @@ public class Favorite extends AppCompatActivity
             // Update the selected item position
             selectedItemPosition = position;
 
+            //fragment pops out
             fragment(selectedNews);
             FrameLayout fragmentLocation2 = findViewById(R.id.fragmentLocation2);
+
+            //link to web browser
             if (selectedNews.link!= null || !selectedNews.link.equals("") ) {
                 fragmentLocation2.setOnClickListener(click -> {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -107,7 +107,7 @@ public class Favorite extends AppCompatActivity
                 });
             }
 
-
+            //DELETE THE NEWS FROM FAVOURITE LIST
             if (findViewById(R.id.delFav) !=null) {
                 delButton.setOnClickListener(click ->
                 { String message = getResources().getString(R.string.removed);
